@@ -20,7 +20,6 @@ public class EmployeeController {
 	@GetMapping("/employees/{id}")
 	ResponseEntity<EmployeeResponse> getEmployeeDetails(@PathVariable("id") int id){
 		
-		//db call -> employee 1
 		EmployeeResponse employeeResponse= employeeService.getEmployeeById(id);
 		
 		return ResponseEntity.status(HttpStatus.OK).body(employeeResponse);
